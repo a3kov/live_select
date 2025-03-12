@@ -690,7 +690,7 @@ defmodule LiveSelect.Component do
   defp encode(value), do: Phoenix.json_library().encode!(value)
 
   defp already_selected?(option, selection) do
-    Enum.any?(selection, fn item -> item.label == option.label end)
+    Enum.any?(selection, fn item -> item.value == option.value end)
   end
 
   defp quick_tags_mode?(socket) do
